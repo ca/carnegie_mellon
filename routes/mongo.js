@@ -10,7 +10,7 @@ db = new Db('votedb', server, {w: 1});
 db.open(function(err, db) {
     console.log(err);
     if(!err) {
-        console.log("Connected to 'highlandsdb'");
+        console.log("Connected to 'votedb'");
         db.collection('votes', {strict:true}, function(err, collection) {
             if (err) {
                 console.log("The 'votes' collection does not exist! Creating with sample data...");
@@ -29,10 +29,10 @@ exports.getVotes = function(req, res) {
 };
 
 exports.postVote = function(req, res) {
-    var classA = req.body;
-    console.log('Adding vote: ' + JSON.stringify(classA));
+    var vote = req.body;
+    console.log('Adding vote: ' + JSON.stringify(vote));
     db.collection('votes', function(err, collection) {
-        collection.insert(classA, {safe:true}, function(err, result) {
+        collection.insert(vote, {safe:true}, function(err, result) {
             if (err) {
                 res.send({'error': 'Error has occurred!'});
             } else {
