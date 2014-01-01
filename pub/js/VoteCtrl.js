@@ -4,17 +4,24 @@ app.controller("VoteCtrl", function($scope, $http){
 
 	$scope.votes = 0;
 
+    $scope.result = {};
+
     $http.get('/api/votes')
     .success(function(data, status, headers, config) {
+        $scope.result = {
+            "upvotes": data['upvotes'],
+            "downvotes": data['downvotes']
+        };
         console.warn(data);
-        $scope.votes = data;
+        console.warn($scope.result);
     }).error(function(data, status, headers, config) {
         alert("Error retrieving votes! " + data);
     });
 
 	$scope.voteUp = function () {
 		$scope.votes += 1;
-        $http.post('/api/votes', $scope.votes)
+        $scope.result.upvotes += 1;
+        $http.post('/api/votes', $scope.result)
         .success(function(data, status, headers, config) {
             console.warn(data);
         }).error(function(data, status, headers, config) {
