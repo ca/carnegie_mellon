@@ -6,6 +6,7 @@ app.controller("VoteCtrl", function($scope, $http){
 
     $http.get('/api/votes')
     .success(function(data, status, headers, config) {
+        console.warn(data);
         $scope.votes = data;
     }).error(function(data, status, headers, config) {
         alert("Error retrieving votes! " + data);
