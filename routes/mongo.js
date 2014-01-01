@@ -43,6 +43,23 @@ exports.postVote = function(req, res) {
      });
 }
 
+exports.updateVotes = function(req, res) {
+    var vote = req.body;
+    console.log('Updating vote');
+    console.log(JSON.stringify(vote));
+    db.collection('votes', function(err, collection) {
+        collection.update({'_id':'52c3b1b8ecd11f3d564076fe'}, vote, {safe:true}, function(err, result) {
+            if (err) {
+                console.log('Error updating vote: ' + err);
+                res.send({'error':'An error has occurred'});
+            } else {
+                console.log('' + result + ' document(s) updated');
+                res.send(vote);
+            }
+        });
+    });
+}
+
 var populateDB = function() {
 
     var votes = [

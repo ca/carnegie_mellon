@@ -21,7 +21,7 @@ app.controller("VoteCtrl", function($scope, $http){
 	$scope.voteUp = function () {
 		$scope.votes += 1;
         $scope.result.upvotes += 1;
-        $http.post('/api/votes', $scope.result)
+        $http.put('/api/votes/52c3b1b8ecd11f3d564076fe', $scope.result)
         .success(function(data, status, headers, config) {
             console.warn(data);
         }).error(function(data, status, headers, config) {

@@ -12,7 +12,7 @@ app.configure(function () {
 });
 
 app.get('/api/votes', mongo.getVotes);
-app.post('/api/votes', mongo.postVote);
+app.put('/api/votes/52c3b1b8ecd11f3d564076fe', mongo.updateVotes);
 
 http.createServer(app).listen(80, function() {
     console.log('Server listening on port 80.... Welcome to the Internet.....');
