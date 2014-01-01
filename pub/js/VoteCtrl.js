@@ -9,8 +9,8 @@ app.controller("VoteCtrl", function($scope, $http){
     $http.get('/api/votes')
     .success(function(data, status, headers, config) {
         $scope.result = {
-            "upvotes": data['upvotes'],
-            "downvotes": data['downvotes']
+            "upvotes": data[data.length - 1].upvotes,
+            "downvotes": data[data.length - 1].downvotes
         };
         console.warn(data);
         console.warn($scope.result);
