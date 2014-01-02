@@ -6,62 +6,48 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Stylish Portfolio Template for Bootstrap</title>
+    <title>Alex should go to CMU</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Add custom CSS here -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='css/maki-sprite.css' rel='stylesheet' />
   </head>
 
   <body>
 
-    <!-- Side Menu -->
     <a id="menu-toggle" href="#" class="btn btn-danger btn-lg toggle"><i class="fa fa-bars"></i></a>
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
-        <!-- <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a> -->
         <br><br>
         <li style="text-align:center"><img src="img/profile_photo.jpg" width="150" style="border-radius:75px"></li>
         <li style="text-align:center"><h2 style="color:white">Alex Vallorosi</h2></li>
         <li style="color:white;text-align:center;margin:30px;line-height:20px;"><p>That's Me! I am really interested in code and want to attend Carnegie Mellon University for the fall semester of 2014.</p></li>
-        <li><a href="#top">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="doc/resume.pdf"><i class="fa fa-book" style="margin-right:10px;"></i>My Resume</a></li>
+        <li><a href="http://www.alexvallorosi.com"><i class="fa fa-user" style="margin-right:10px;"></i>My Portfolio</a></li>
       </ul>
     </div>
-    <!-- /Side Menu -->
 
-    <!-- Full Page Image Header Area -->
     <div id="top" class="header">
       <div class="vert-text">
           <h1 style="font-family:bodoni;color:#AF1E2D">Carnegie Mellon</h1>
         <h1 style="color:white">And Alex V.</h1>
-        <h3><em>We</em> Build Great Templates, <em>You</em> Make Them Better</h3>
-        <a href="#about" class="btn btn-default btn-lg">Find Out More</a>
+        <h3>This is why Carnegie Mellon should accept <em>me.</em></h3>
       </div>
     </div>
-    <!-- /Full Page Image Header Area -->
 
-    <!-- Intro -->
     <div id="about" class="intro">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
               <h1 style="font-family:Impact;font-size:10em;text-align:center;background-image:url('img/code.png');-webkit-background-clip:text;background-clip:text;color:rgba(0,0,0,0);background-position:center;background-attachment:fixed;background-repeat:none;">CODE</h1>
-            <h2>Is something that is very important to me. Apparently it is to you too!</h2>
-            <p class="lead">Over the past year I've made quantum leaps in my programming ability. Note to save for later: <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+            <h2>is something that is very important to me. Apparently it is to you too!</h2>
+            <p class="lead">Over the past year I've made quantum leaps in my programming ability. You can see what I've done in the programming world below!</p>
           </div>
         </div>
       </div>
     </div>
-    <!-- /Intro -->
 
-    <!-- Services -->
     <div id="services" class="services">
       <div class="container">
         <div class="row">
@@ -73,7 +59,7 @@
         <div class="row">
           <div class="col-md-2 col-md-offset-2 text-center">
             <div class="service-item">
-              <i class="service-icon fa fa-github-alt"></i>
+                <img src="img/os.png" height="120" style="margin-top:10px;margin-bottom:10px;">
               <h4>Open Source</h4>
               <p>I make a lot of Open Source contributions on Github. You can check out my contributions by clicking on the icon!</p>
             </div>
@@ -94,9 +80,32 @@
           </div>
           <div class="col-md-2 text-center">
             <div class="service-item">
-              <i class="service-icon fa fa-pencil"></i>
-              <h4>Grooveshark?</h4>
-              <p>I think maybe I'll put a little thing here about grooveshark.</p>
+                <img src="http://static3.music-jobs.com/uploads/site_44/blog/2013/08/Grooveshark-logo.png" width="140" style="border-radius:70px">
+              <h4>Grooveshark</h4>
+              <p>Last summer I interned at Grooveshark. While I was here I learned Backbone and built a frontend feature with it.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 col-md-offset-2 text-center">
+            <div class="service-item">
+                <img src="http://upload.wikimedia.org/wikipedia/commons/1/16/Ruby_on_Rails-logo.png" height="140">
+              <h4>Ruby on Rails</h4>
+              <p>The backend of a site is just as important as the frontend. I am learning Ruby on Rails so I can better understand the backend.</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="service-item">
+                <img src="http://www.o2networks.com.au/sites/default/files/vendors/AWS_LOGO_CMYK.png" height="140">
+              <h4>AWS &amp; DigitalOcean</h4>
+              <p>I typically deploy my web apps on AWS or DigitalOcean servers and I'm comfortable working in that environment. I've set up push to deploy services or simply used ssh and ftp. On these servers I set up web backends in Node.js or Ruby on Rails. This site is a Node server hosted on AWS!</p>
+            </div>
+          </div>
+          <div class="col-md-2 text-center">
+            <div class="service-item">
+              <img src="img/ru.png" width="120" style="margin-top:17px;margin-bottom:17px;">
+              <h4>HackRU</h4>
+              <p>I really enjoy going to hackathons. I built <a href="http://hackru.alexvallorosi.com">this</a> product at HackRU, and I am going to MHacks soon!</p>
             </div>
           </div>
         </div>
@@ -105,8 +114,9 @@
 
     <div class="callout">
       <div class="vert-text">
-          <h1 style="font-family:Impact;font-size:10em;text-align:center;background-image:url('img/code.png');-webkit-background-clip:text;background-clip:text;color:rgba(0,0,0,0);background-position:center;background-attachment:fixed;background-repeat:none;">SOFTWARE</h1>
-        <h1>A Dramatic Text Area</h1>
+          <h1>I Work In</h1>
+          <h1 style="font-family:Impact;font-size:10em;text-align:center;">NEW YORK CITY</h1>
+        <h1>Building Web Products</h1>
       </div>
     </div>
 
@@ -121,54 +131,97 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-2 text-center">
             <div class="portfolio-item">
-              <a href="#"><img class="img-portfolio img-responsive" src="http://www.placehold.it/360x252"></a>
-              <h4>Lorem Ipsum</h4>
+              <a href="http://www.highlandsvoices.com"><img class="img-portfolio img-responsive" src="img/highlands_voices.png"></a>
+              <h4>Highlands Voices Website</h4>
             </div>
           </div>
           <div class="col-md-4 text-center">
             <div class="portfolio-item">
-              <a href="#"><img class="img-portfolio img-responsive" src="http://www.placehold.it/360x252"></a>
-              <h4>Dolor Sit Amet</h4>
+              <a href="http://www.generation3inc.com"><img class="img-portfolio img-responsive" src="img/g3.png"></a>
+              <h4>Generation III inc Website</h4>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4 col-md-offset-2 text-center">
             <div class="portfolio-item">
-              <a href="#"><img class="img-portfolio img-responsive" src="http://www.placehold.it/360x252"></a>
-              <h4>Dolor Sit Amet</h4>
+              <a href="http://www.grooveshark.com"><img class="img-portfolio img-responsive" src="img/profile_card.png"></a>
+              <h4>Grooveshark &middot; Profile Cards</h4>
             </div>
           </div>
           <div class="col-md-4 text-center">
             <div class="portfolio-item">
-              <a href="#"><img class="img-portfolio img-responsive" src="http://www.placehold.it/360x252"></a>
-              <h4>Lorem Ipsum</h4>
+              <a href="http://www.fanaticaldetailers.com"><img class="img-portfolio img-responsive" src="img/fanatical_detailers.png"></a>
+              <h4>Fanatical Detailers LLC Website</h4>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- /Portfolio -->
 
-    <!-- Call to Action -->
     <div class="call-to-action">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
-            <h3>The buttons below are impossible to resist.</h3>
-            <a href="#" class="btn btn-lg btn-default">Click Me!</a>
-            <a href="#" class="btn btn-lg btn-primary">Look at Me!</a>
+            <h3>But programming is not the only thing I've done.</h3>
           </div>
         </div>
       </div>
     </div>
-    <!-- /Call to Action -->
+
+    <div id="services" class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-md-offset-2 text-center">
+            <div class="service-item">
+              <i class="service-icon fa fa-medkit"></i>
+              <h4>First Responder</h4>
+              <p>Two years ago I trained to become a First Responder. I spent many hours serving my local ambulance corps.</p>
+            </div>
+          </div>
+          <div class="col-md-2 text-center">
+            <div class="service-item">
+              <div style="border:3px solid white;border-radius:50%;width:140px;height:140px;margin-left:10px"><img src="img/football.png" width="100" style="padding-top:20px"></div>
+              <h4>Football</h4>
+              <p>I played freshman and Junior Varsity football for two years. I continue to play intramural volleyball.</p>
+            </div>
+          </div>
+          <div class="col-md-2 text-center">
+            <div class="service-item">
+              <i class="service-icon fa fa-truck"></i>
+              <h4>Handyman</h4>
+              <p>Throughout middle school and for three years in high school I worked as a handyman doing moving, painting, and general estate care.</p>
+            </div>
+          </div>
+          <div class="col-md-2 text-center">
+            <div class="service-item">
+              <i class="service-icon fa fa-rocket"></i>
+              <h4>FIRST Robotics</h4>
+              <p>I am the two-year president of a state finalist FTC Robotics Team. Our team is 3983 Highlands Undefined.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+              <h2>I want to bring a <em>passionate</em> and well rounded individual to Carnegie Mellon.</h2>
+            <p class="lead">Most of all, I want to teach what I know and get the best education that I can about computer science.<p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
 
     <div id="about" class="intro" ng-controller="VoteCtrl">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
-			<h1>{{ result.upvotes }} Votes</h1>
+			<h1>{{ result.upvotes - result.downvotes }} Votes</h1>
 			<a ng-click="voteUp()"><i class="fa fa-thumbs-o-up" style="font-size:100px;display:inline;margin:50px;cursor:pointer;"></i></a>
               <h1 style="display:inline;line-height:100px;margin:50px;font-size:100px;padding-right:300px;"> or </h1>
               <div id="thumb-down" style="position:absolute;z-index:10;right:50px;top:50px;cursor:pointer;"><span id="q" style="font-size:100px;opacity:0;">?</span><a id="downvote" ng-click="voteDown()"><i class="fa fa-thumbs-o-down" style="font-size:100px"></i></a></div>
@@ -178,21 +231,17 @@
       </div>
     </div>
 
-    <!-- Map -->
-    <div id="contact" class="map">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small></iframe>
-    </div>
-    <!-- /Map -->
+    <hr>
 
-    <!-- Footer -->
     <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
             <ul class="list-inline">
-              <li><i class="fa fa-facebook fa-3x"></i></li>
-              <li><i class="fa fa-twitter fa-3x"></i></li>
-              <li><i class="fa fa-dribbble fa-3x"></i></li>
+              <li><a href="http://blog.alexvallorosi.com"><i class="fa fa-tumblr fa-3x"></i></a></li>
+              <li><a href="http://www.twitter.com/alexvallorosi"><i class="fa fa-twitter fa-3x"></i></a></li>
+              <li><a href="http://www.linkedin.com/pub/alex-vallorosi/49/673/4ab"><i class="fa fa-linkedin fa-3x"></i></a></li>
+              <li><a href="http://www.github.com/reddog9287"><i class="fa fa-github-alt fa-3x"></i></a></li>
             </ul>
             <div class="top-scroll">
               <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
@@ -203,13 +252,9 @@
         </div>
       </div>
     </footer>
-    <!-- /Footer -->
 
-    <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
-
-    <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
     <script>
         $("#sidebar-wrapper").click(function(e) {
             e.preventDefault();
@@ -243,7 +288,5 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
 	<script src="js/VoteCtrl.js"></script>
     <script src="js/fun.js"></script>
-
   </body>
-
 </html>

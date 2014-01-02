@@ -1,11 +1,4 @@
-var count = 0;
-function mouseenter () {
-    if (count > 5) {
-        $('#thumb-down').css({ WebkitTransform: 'rotate(180deg)'});
-        $('#q').css({ WebkitTransform: 'rotate(90deg)'}).fadeIn(400);
-        // $('#q').css({visibility: 'visible'});
-        return;
-    }
+function runAway () {
     var $this = $(this),
         dWidth = $(document).width() - $this.width(),
         height = 360,
@@ -16,5 +9,5 @@ function mouseenter () {
 }
 
 $(document).ready(function(){
-    $('#thumb-down').mouseenter(mouseenter);
+    $('#thumb-down').mouseenter(runAway);
 });
