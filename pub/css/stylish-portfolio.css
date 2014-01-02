@@ -111,7 +111,7 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(http://www.tysto.com/articles07/pics/pittsburgh/pittsburgh-skyline-night-pan.jpg) no-repeat center center fixed;
+  background: url(../img/background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -217,12 +217,17 @@ i.scroll {
 i.scroll:hover {
   color: #0a5175;
 }
+
+.center {
+    text-align: center;
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {
 
   .header {
-	background: url(../img/bg.jpg) no-repeat center center scroll;
+	background: url(../img/background.jpg) no-repeat center center scroll;
   }
 
   .callout {
