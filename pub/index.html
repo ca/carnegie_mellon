@@ -11,20 +11,19 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/stylish-portfolio.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href='css/maki-sprite.css' rel='stylesheet' />
   </head>
 
   <body>
-
     <a id="menu-toggle" href="#" class="btn btn-danger btn-lg toggle"><i class="fa fa-bars"></i></a>
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
+        <!-- <a id="menu-close" href="#" class="btn btn-danger btn-lg toggle"><i class="fa fa-bars"></i></a> -->
         <br><br>
         <li style="text-align:center"><img src="img/profile_photo.jpg" width="150" style="border-radius:75px"></li>
         <li style="text-align:center"><h2 style="color:white">Alex Vallorosi</h2></li>
         <li style="color:white;text-align:center;margin:30px;line-height:20px;"><p>That's Me! I am really interested in code and want to attend Carnegie Mellon University for the fall semester of 2014.</p></li>
-        <li><a href="doc/resume.pdf"><i class="fa fa-book" style="margin-right:10px;"></i>My Resume</a></li>
-        <li><a href="http://www.alexvallorosi.com"><i class="fa fa-user" style="margin-right:10px;"></i>My Portfolio</a></li>
+        <li><a href="doc/resume.pdf" class="sidebar-link"><i class="fa fa-book" style="margin-right:10px;"></i>My Resume</a></li>
+        <li><a href="http://www.alexvallorosi.com" class="sidebar-link"><i class="fa fa-user" style="margin-right:10px;"></i>My Portfolio</a></li>
       </ul>
     </div>
 
@@ -256,12 +255,6 @@
 
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script>
-        $("#sidebar-wrapper").click(function(e) {
-            e.preventDefault();
-            $("#sidebar-wrapper").toggleClass("active");
-        });
-    </script>
     <script>
         $("#menu-toggle").click(function(e) {
             e.preventDefault();
