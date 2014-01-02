@@ -28,27 +28,43 @@ exports.getVotes = function(req, res) {
     });
 };
 
-exports.postVote = function(req, res) {
-    var vote = req.body;
-    console.log('Adding vote: ' + JSON.stringify(vote));
-    db.collection('votes', function(err, collection) {
-        collection.insert(vote, {safe:true}, function(err, result) {
-            if (err) {
-                res.send({'error': 'Error has occurred!'});
-            } else {
-                console.log('Success: ' + JSON.stringify(result[0]));
-                res.send(result[0]);
-            }
-         });
-     });
-}
+// exports.postVote = function(req, res) {
+//     var vote = req.body;
+//     console.log('Adding vote: ' + JSON.stringify(vote));
+//     db.collection('votes', function(err, collection) {
+//         collection.insert(vote, {safe:true}, function(err, result) {
+//             if (err) {
+//                 res.send({'error': 'Error has occurred!'});
+//             } else {
+//                 console.log('Success: ' + JSON.stringify(result[0]));
+//                 res.send(result[0]);
+//             }
+//          });
+//      });
+// }
 
 exports.updateVotes = function(req, res) {
-    var id = req.params.id;
-    var vote = req.body;
+    var id = req.params.id,
+        vote = req.body,
+        upvote = req.body.upvotes,
+        downvote = req.body.downvotes,
+        curDownvote = db.votes.find({_id: ObjectId("52c3b1b8ecd11f3d564076fe")}).upvotes,
+        curUpvote = db.votes.find({_id: ObjectId("52c3b1b8ecd11f3d564076fe")}).downvotes;
+
+    if (upvote - 1 > curUpvote || downvote - 1 > curDownvote) {
+        res.end('error': 'HAHA I CAUGHT YOU');
+        return;
+    }
+
+    // if (req.body.upvotes - db.collection('votes').)
+    // check if the upvote or downvote that they are submitting is greater
+    // than one vote. If so, error!
+
+
     console.log('Updating vote');
     console.log(JSON.stringify(vote));
     db.collection('votes', function(err, collection) {
+
         collection.update({'_id':new BSON.ObjectID(id)}, vote, {safe:true}, function(err, result) {
             if (err) {
                 console.log('Error updating vote: ' + err);
