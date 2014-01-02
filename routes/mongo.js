@@ -28,53 +28,60 @@ exports.getVotes = function(req, res) {
     });
 };
 
-// exports.postVote = function(req, res) {
-//     var vote = req.body;
-//     console.log('Adding vote: ' + JSON.stringify(vote));
-//     db.collection('votes', function(err, collection) {
-//         collection.insert(vote, {safe:true}, function(err, result) {
-//             if (err) {
-//                 res.send({'error': 'Error has occurred!'});
-//             } else {
-//                 console.log('Success: ' + JSON.stringify(result[0]));
-//                 res.send(result[0]);
-//             }
-//          });
-//      });
-// }
-
 exports.updateVotes = function(req, res) {
     var id = req.params.id,
         vote = req.body,
+
         upvote = req.body.upvotes,
         downvote = req.body.downvotes,
-        curDownvote = db.votes.find({_id: ObjectId("52c3b1b8ecd11f3d564076fe")}).upvotes,
-        curUpvote = db.votes.find({_id: ObjectId("52c3b1b8ecd11f3d564076fe")}).downvotes;
+        curDownvote = 0,
+        curUpvote = 0;
 
-    if (upvote - 1 > curUpvote || downvote - 1 > curDownvote) {
-        res.end('error': 'HAHA I CAUGHT YOU');
-        return;
-    }
+        db.collection('votes', function(err, collection) {
+            collection.find().toArray(function(err, items) {
+                curDownvote = items[0].downvotes;
+                curUpvote = items[0].upvotes;
+                console.log("upvotes sent in request: " + upvote);
+                console.log("upvotes currently in db: " + curUpvote);
 
-    // if (req.body.upvotes - db.collection('votes').)
-    // check if the upvote or downvote that they are submitting is greater
-    // than one vote. If so, error!
-
+                if (curDownvote == downvote) {
+                    if (curUpvote + 1 != upvote) {
+                        console.log('Someone trying to send many upvotes');
+                        res.send({'error':'Gotcha! It was a nice try though.'});
+                        return;
+                    } else {
+                        collection.update({'_id':new BSON.ObjectID(id)}, vote, {safe:true}, function(err, result) {
+                            if (err) {
+                                console.log('Error updating vote: ' + err);
+                                res.send({'error':'An error has occurred'});
+                            } else {
+                                console.log('' + result + ' document(s) updated');
+                                res.send(vote);
+                            }
+                        });
+                    }
+                } else if (curUpvote == upvote) {
+                    if (curDownvote + 1 != downvote) {
+                        console.log('Someone trying to send many downvotes');
+                        res.send({'error':'Gotcha! It was a nice try though.'});
+                        return;
+                    } else {
+                        collection.update({'_id':new BSON.ObjectID(id)}, vote, {safe:true}, function(err, result) {
+                            if (err) {
+                                console.log('Error updating vote: ' + err);
+                                res.send({'error':'An error has occurred'});
+                            } else {
+                                console.log('' + result + ' document(s) updated');
+                                res.send(vote);
+                            }
+                        });
+                    }
+                }
+            });
+        });
 
     console.log('Updating vote');
     console.log(JSON.stringify(vote));
-    db.collection('votes', function(err, collection) {
-
-        collection.update({'_id':new BSON.ObjectID(id)}, vote, {safe:true}, function(err, result) {
-            if (err) {
-                console.log('Error updating vote: ' + err);
-                res.send({'error':'An error has occurred'});
-            } else {
-                console.log('' + result + ' document(s) updated');
-                res.send(vote);
-            }
-        });
-    });
 }
 
 var populateDB = function() {
