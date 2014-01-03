@@ -17,10 +17,9 @@
     <a id="menu-toggle" href="#" class="btn btn-danger btn-lg toggle"><i class="fa fa-bars"></i></a>
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
-        <!-- <a id="menu-close" href="#" class="btn btn-danger btn-lg toggle"><i class="fa fa-bars"></i></a> -->
-        <li class="center" style="margin-top:50px;"><img src="img/profile_photo.jpg" width="150" style="border-radius:75px" alt="Profile Picture"></li>
+        <li class="center" style="margin-top:50px;"><img src="img/profile_photo.jpg" width="150" class="round" alt="Profile Picture"></li>
         <li class="center"><h2 style="color:white">Alex Vallorosi</h2></li>
-        <li class="center" style="color:white;margin:30px;line-height:20px;"><p>That's Me! I am really interested in learning computer science and want to attend Carnegie Mellon University for the fall semester of 2014.</p></li>
+        <li class="bio center"><p>That's Me! I am really interested in learning computer science and want to attend Carnegie Mellon University for the fall semester of 2014.</p></li>
         <li><a href="doc/resume.pdf" class="sidebar-link" target="_blank"><i class="fa fa-book" style="margin-right:10px;"></i>My Resume</a></li>
         <li><a href="http://www.alexvallorosi.com" class="sidebar-link" target="_blank"><i class="fa fa-user" style="margin-right:10px;"></i>My Portfolio</a></li>
       </ul>
@@ -28,9 +27,9 @@
 
     <div class="header">
       <div class="vert-text">
-          <h1 style="font-family:bodoni;color:#AF1E2D;text-shadow:2px 2px #383838">Carnegie Mellon</h1>
-        <h1 style="color:white;text-shadow:2px 2px #383838">And Alex V.</h1>
-        <h3 style="color:white;text-shadow:2px 2px #383838">This is why Carnegie Mellon should accept <em>me.</em></h3>
+          <h1 class="cm shadow">Carnegie Mellon</h1>
+        <h1 class="shadow">And Alex V.</h1>
+        <h3 class="shadow">This is why Carnegie Mellon should accept <em>me.</em></h3>
       </div>
     </div>
 
@@ -38,7 +37,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
-              <h1 style="font-family:Impact;font-size:10em;text-align:center;background-image:url('img/code.png');-webkit-background-clip:text;background-clip:text;color:rgba(0,0,0,0);background-position:center;background-attachment:fixed;background-repeat:none;">CODE</h1>
+              <h1 class="code">CODE</h1>
             <h2>is something that is very important to me. Apparently it is to you too!</h2>
             <p class="lead">Over the past year I've made quantum leaps in my programming ability. This has lead me to discover many interesting things about computer science such as design patterns and other concepts</p>
           </div>
@@ -78,7 +77,7 @@
           </div>
           <div class="col-md-2 text-center">
             <div class="service-item">
-                <img src="http://static3.music-jobs.com/uploads/site_44/blog/2013/08/Grooveshark-logo.png" width="140" style="border-radius:70px" alt="Grooveshark">
+                <img src="img/gs-logo.png" width="140" class="round" alt="Grooveshark">
               <h4>Grooveshark</h4>
               <p>Last summer I interned at Grooveshark. While I was here I learned Backbone and built a frontend feature with it.</p>
             </div>
@@ -87,14 +86,14 @@
         <div class="row">
           <div class="col-md-2 col-md-offset-2 text-center">
             <div class="service-item">
-                <img src="http://upload.wikimedia.org/wikipedia/commons/1/16/Ruby_on_Rails-logo.png" height="140" alt="Ruby on Rails">
+                <img src="img/rails.png" height="140" alt="Ruby on Rails">
               <h4>Ruby on Rails</h4>
               <p>The backend of a site is just as important as the frontend. I am learning Ruby on Rails so I can better understand the backend.</p>
             </div>
           </div>
           <div class="col-md-4 text-center">
             <div class="service-item">
-                <img src="http://www.o2networks.com.au/sites/default/files/vendors/AWS_LOGO_CMYK.png" height="140" alt="Amazon Web Services">
+                <img src="img/aws.png" alt="Amazon Web Services" class="aws">
               <h4>AWS &amp; DigitalOcean</h4>
               <p>I typically deploy my web apps on AWS or DigitalOcean servers and I'm comfortable working in that environment. I've set up push to deploy services or simply used ssh and ftp. On these servers I set up web backends in Node.js or Ruby on Rails. This site is a Node server hosted on AWS!</p>
             </div>
@@ -112,9 +111,9 @@
 
     <div class="callout">
       <div class="vert-text">
-          <h1 style="text-shadow:2px 2px #383838">I Work In</h1>
-          <h1 style="font-family:Impact;font-size:10em;text-align:center;text-shadow:2px 2px #383838">NEW YORK CITY</h1>
-        <h1 style="text-shadow:2px 2px #383838">Building Web Products</h1>
+          <h1 class="shadow">I Work In</h1>
+          <h1 class="nyc shadow">NEW YORK CITY</h1>
+        <h1 class="shadow">Building Web Products</h1>
       </div>
     </div>
 
@@ -179,7 +178,7 @@
           </div>
           <div class="col-md-2 text-center">
             <div class="service-item">
-              <div style="border:3px solid white;border-radius:50%;width:140px;height:140px;margin-left:10px"><img src="img/football.png" width="100" style="padding-top:20px" alt="football"></div>
+              <div class="football"><img src="img/football.png" width="100" style="padding-top:20px" alt="football"></div>
               <h4>Football</h4>
               <p>I played freshman and Junior Varsity football for two years. I continue to play intramural volleyball.</p>
             </div>
@@ -220,9 +219,9 @@
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
 			<h1>{{ result.upvotes - result.downvotes }} Votes</h1>
-			<a ng-click="voteUp()"><i class="fa fa-thumbs-o-up" style="font-size:100px;display:inline;margin:50px;cursor:pointer;"></i></a>
-              <h1 style="display:inline;line-height:100px;margin:50px;font-size:100px;padding-right:300px;"> or </h1>
-              <div id="thumb-down" style="position:absolute;z-index:10;right:50px;top:50px;cursor:pointer;"><span id="q" style="font-size:100px;opacity:0;">?</span><a id="downvote" ng-click="voteDown()"><i class="fa fa-thumbs-o-down" style="font-size:100px"></i></a></div>
+			<a ng-click="voteUp()"><i class="fa fa-thumbs-o-up thumbs-up"></i></a>
+              <h1 class="or"> or </h1>
+              <div id="thumb-down"><span id="q" style="font-size:100px;opacity:0;">?</span><a id="downvote" ng-click="voteDown()"><i class="fa fa-thumbs-o-down" style="font-size:100px"></i></a></div>
 			<p class="lead">You can help me by voting for whether or not I should be accepted!</p>
           </div>
         </div>

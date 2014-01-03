@@ -1,5 +1,15 @@
 /* Global Styles */
 
+@font-face {
+    font-family: impactMobile;
+    src: url(../fonts/impact.ttf);
+}
+
+@font-face {
+    font-family: bodoni;
+    src: url(../fonts/bodoni.ttf);
+}
+
 html,
 body {
   height: 100%;
@@ -7,6 +17,7 @@ body {
 }
 
 .vert-text {
+  color: white;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -222,6 +233,78 @@ i.scroll:hover {
     text-align: center;
 }
 
+.nyc {
+    font-family:Impact, impactMobile;
+    font-size:10em;
+    text-align:center;
+}
+
+.cm {
+    font-family: bodoni;
+    color:#AF1E2D;
+}
+
+.bio {
+    color:white;
+    margin:30px;
+    line-height:20px;
+}
+
+.shadow {
+     text-shadow:2px 2px #383838;
+}
+
+.code {
+    font-family:Impact, impactMobile;
+    font-size:10em;
+    text-align:center;
+    background-image:url('img/code.png');
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:rgba(0,0,0,0);
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:none;
+}
+
+.or {
+    display:inline;
+    line-height:100px;
+    margin:50px;
+    font-size:100px;
+    padding-right:300px;
+}
+
+.thumbs-up {
+    font-size:100px;
+    display:inline;
+    margin:50px;
+    cursor:pointer;
+}
+
+#thumb-down {
+    position:absolute;
+    z-index:10;
+    right:50px;top:50px;
+    cursor:pointer;
+}
+
+.football {
+    border:3px solid white;
+    border-radius:50%;
+    width:140px;
+    height:140px;
+    margin-left:10px;
+}
+
+.round {
+    border-radius:50%;
+}
+
+.aws {
+    height: 140px;
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {
@@ -234,8 +317,25 @@ i.scroll:hover {
 	background: url(../img/callout.jpg) no-repeat center center scroll;
   }
 
-  .map {
-	height: 75%;
+  .code {
+      color: inherit;
+  }
+
+  .football {
+      margin-left:75px;
+  }
+
+  .aws {
+      height: 100px;
+  }
+
+  .or {
+      padding-right:0;
+  }
+
+  #thumb-down {
+      right: 120px;
+      top: 420px;
   }
 
 }
