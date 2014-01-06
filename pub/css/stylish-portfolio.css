@@ -255,13 +255,15 @@ i.scroll:hover {
 }
 
 .code {
+	color: white;
     font-family:Impact, impactMobile;
     font-size:10em;
     text-align:center;
     background-image:url('../img/code.png');
     -webkit-background-clip:text;
     background-clip:text;
-    color:rgba(0,0,0,0);
+	-webkit-text-fill-color: transparent;
+/*    color:rgba(0,0,0,0);*/
     background-position:center;
     background-attachment:fixed;
     background-repeat:none;
