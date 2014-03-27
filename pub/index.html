@@ -219,11 +219,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
-			<h1>{{ result.upvotes - result.downvotes }} Votes</h1>
-			<a ng-click="voteUp()"><i class="fa fa-thumbs-o-up thumbs-up"></i></a>
-              <h1 class="or"> or </h1>
-              <div id="thumb-down"><span id="q" style="font-size:100px;opacity:0;">?</span><a id="downvote" ng-click="voteDown()"><i class="fa fa-thumbs-o-down" style="font-size:100px"></i></a></div>
-			<p class="lead">You can help me by voting for whether or not I should be accepted!</p>
+			<h1 class="cm" style="color:red">Rejected.</h1>
+            <h1>{{ result.upvotes - result.downvotes }} Votes</h1>
+            <h1>Voting is now closed.</h1>
+			<p class="lead">Thank you so much for voting! I was overwhelmed by the support I received from site visitors, Carnegie Mellon students, staff and alumni, and everyone who found this site through Hacker News, Reddit, Facebook and Twitter. Unfortunately, I was not accepted to Carnegie Mellon CS. You can read my post <a href="http://blog.alexvallorosi.com/post/80904762274/today-i-got-rejected-from-carnegie-mellon">here</a> on my blog!</p>
           </div>
         </div>
       </div>
@@ -288,6 +287,5 @@
 	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
 	<script src="js/VoteCtrl.js"></script>
-    <script src="js/fun.js"></script>
   </body>
 </html>
