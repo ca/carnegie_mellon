@@ -15,7 +15,7 @@ app.controller("VoteCtrl", function($scope, $http){
         console.warn(data);
         console.warn($scope.result);
     }).error(function(data, status, headers, config) {
-        alert("Error retrieving votes! " + data);
+        console.warn("Error retrieving votes! " + data);
     });
 
 	$scope.voteUp = function () {
